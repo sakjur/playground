@@ -1,0 +1,49 @@
+ @import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Fira+Mono');
+
+hr {
+    border: 3px #d5d5d5 dashed;
+}
+
+#container {
+    background: #f7f7f7;
+    width:800px;
+    margin: 0 auto;
+    padding: 70px;
+    font-family: 'Cutive Mono', monospace;
+}
+
+#container textarea {
+    width: 730px;
+    height: 250px;
+    padding: 2em;
+}
+
+#container nav {
+    margin-top: 2em;
+    display: block;
+    text-align:right;
+}
+
+#container nav a {
+    padding: 0 1em;
+    color: #000099;
+    border-right: 1px #000099 solid;
+}
+
+#container nav a:last-child {
+    border-right: none;
+}
+
+.value {
+    display: inline-block;
+    width: 120px;
+    clear: right;
+    
+}
+
+.part {
+    margin-bottom: 2em;
+    width: 750px;
+    border: 1px #d5d5d5 solid;
+    padding: .2em 1em;
+}
