@@ -33,8 +33,13 @@
                                          (get line :val)))
       state)))
 
-(defn run [state lines]
-  (if (empty? lines) state (recur (run-line (first lines) state) (rest lines))))
+(defn run [state maxval lines]
+  (if
+    (empty? lines)
+    [(apply max (map val state)) maxval]
+    (recur (run-line (first lines) state)
+           (apply max maxval (map val state))
+           (rest lines))))
 
 (->> "input"
      slurp
@@ -42,7 +47,5 @@
      (map split-words)
      (map #(zipmap lineparser %))
      (map val-to-int)
-     (run {})
-     (map val)
-     (apply max)
+     (run {} Double/NEGATIVE_INFINITY)
      println)
